@@ -5,7 +5,14 @@ const Task = db.define("task", {
   description: {
     type: Sequelize.STRING,
     allowNull: false,
-  },
+  },  
+
+  employeeId: { // THIS IS A TEST
+    type: Sequelize.INTEGER,
+    references: {
+      model: Employee,
+      key: "id"
+    }},
 
   priority: {
     type: Sequelize.STRING

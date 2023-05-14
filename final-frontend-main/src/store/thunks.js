@@ -40,11 +40,11 @@ export const fetchEmployeeThunk = (id) => async (dispatch) => {
 //All courses
 export const fetchAllTasksThunk = () => async (dispatch) => {
   try {
-    alert('test')
+    //alert('test')
     let res = await axios.get(`${path}/tasks`);
     dispatch(ac.fetchAllTasks(res.data));
   } catch(err) {
-    alert('t')
+    //alert('t')
     console.error(err);
   }
 };
@@ -70,6 +70,7 @@ export const deleteTaskThunk = taskId => async dispatch => {
   }
 };
 
+/*
 export const editTaskThunk = task => async dispatch => {
   try {
     let res = await axios.put(`${path}/tasks/${task.id}`, task);
@@ -79,6 +80,18 @@ export const editTaskThunk = task => async dispatch => {
     console.error(err);
   }
 };
+*/
+
+export const editTaskThunk = task => async dispatch => {
+  try {
+    let res = await axios.put(`${path}/tasks/${task.id}`, task);
+    //res.data is the updated course object
+    dispatch(ac.editTask(res.data));
+  } catch(err) {
+    console.error(err);
+  }
+};
+
 
 //Single course
 export const fetchTaskThunk = id => async dispatch => {
