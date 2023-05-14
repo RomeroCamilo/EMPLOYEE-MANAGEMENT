@@ -10,7 +10,8 @@ const AllEmployeesView = (props) => {
 
   return (
     <div>
-      <h1>test</h1>
+ 
+      <Link to={`/`}><h1>HOME</h1></Link>
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + " " + employee.lastname;
         return (
@@ -21,11 +22,11 @@ const AllEmployeesView = (props) => {
           <p>{employee.department}</p>
         </div>
         );
-
       })}
     </div>
   );
 };
+
 
 AllEmployeesView.propTypes = {
   allEmployees: PropTypes.array.isRequired,

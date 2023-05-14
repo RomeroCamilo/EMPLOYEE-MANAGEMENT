@@ -7,7 +7,7 @@ let availableTasks = allTasks.filter(task => task.employeeId == null);
 
 return (
   <div>
-    <h1>TEST</h1>
+    <Link to={`/`}><h1>HOME</h1></Link>
     <h1>{employee.firstname}</h1>
     <h3>{employee.department}</h3>
     <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>

@@ -11,7 +11,7 @@ let path = "http://localhost:5001/api"; // Final-Backend set to 5001 port.
 //All instructors
 export const fetchAllEmployeesThunk = () => async (dispatch) => {
   try {
-    alert('test')
+    //alert('test')
     let res = await axios.get(`${path}/employees`);
     dispatch(ac.fetchAllEmployees(res.data));
   } catch(err) {
