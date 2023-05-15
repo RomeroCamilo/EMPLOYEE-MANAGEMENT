@@ -12,8 +12,15 @@ function AllEmployeesContainer() {
   }, [dispatch]);
 
   const deleteEmployee = (employeeId) => {
-    dispatch(deleteEmployeeThunk(employeeId));
+    dispatch(deleteEmployeeThunk(employeeId))
+      .then(() => {
+        window.location.reload(); // Refresh the page
+      })
+      .catch((error) => {
+        console.log("Error deleting employee:", error);
+      });
   };
+
 
   return (
     <AllEmployeesView
