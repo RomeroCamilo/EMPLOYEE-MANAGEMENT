@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 const HomePageView = () => {
   return (
     <div>
-      <h1>Final Project</h1>
+      <h1>Employee Management System</h1>
       <Link to={'/employees'}> All Employees </Link>
       <br></br>
       <br></br>
