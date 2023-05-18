@@ -1,8 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const NewEmployeeView = ({ handleChange, handleSubmit, error }) => {
   return (
     <div className="root">
+      <br></br>
+      <Link to={'/'}> HOME </Link>
       <div className="formContainer">
         <div className="formTitle">
           <h2
