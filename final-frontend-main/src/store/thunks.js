@@ -15,7 +15,7 @@ export const fetchAllEmployeesThunk = () => async (dispatch) => {
     let res = await axios.get(`${path}/employees`);
     dispatch(ac.fetchAllEmployees(res.data));
   } catch(err) {
-    alert('test')
+    //alert('test')
     console.error(err);
   }
 };
